@@ -89,3 +89,47 @@ aside {
 .footer div {
   background-color: coral;
 }
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  header,
+  .main_content,
+  .main_content .content,
+  footer,
+  aside {
+    padding: 17.5px;
+  }
+
+  .navigation div {
+    margin: 17.5px;
+  }
+
+  .header {
+    margin-bottom: 17.5px;
+  }
+
+  .navigation {
+    margin-bottom: 10px;
+  }
+
+  .main_content {
+    background-color: yellow;
+    flex-direction: column;
+    gap: 17.5px;
+  }
+
+  .main_content .content {
+    gap: 16px;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  div {
+    padding: 11px
+  }
+
+  .footer {
+    margin-top: 17.5px;
+  }
+}
