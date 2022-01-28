@@ -1,0 +1,91 @@
+.container {
+  max-width: 1200px;
+}
+
+header,
+div,
+footer,
+aside {
+  padding: 11px;
+}
+
+.header,
+.main_content,
+.footer {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  display: flex;
+  background-color: steelblue;
+  margin-bottom: 5px;
+}
+
+.navigation div {
+  background-color: orangered;
+  margin: 10px;
+}
+
+.navigation div:nth-child(2) {
+  flex-grow: 5;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navigation div:first-child,
+.navigation div:last-child {
+  flex-grow: 1;
+}
+
+.hero {
+  background-color: orange;
+}
+.hero .title {
+  background-color: burlywood;
+}
+
+.main_content {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  margin-right: 10px;
+  background-color: slategrey;
+  gap: 10px;
+}
+
+.content div {
+  background-color: darkslateblue;
+  flex: 1 0 42%;
+}
+
+.content .last {
+  background-color: cadetblue;
+}
+
+.sidebar {
+  flex-grow: 1;
+  background-color: brown;
+}
+.sidebar div {
+  background-color: darkorange;
+}
+.sidebar div:first-child {
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 10px;
+}
+.footer div {
+  background-color: coral;
+}
