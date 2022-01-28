@@ -126,10 +126,71 @@ aside {
   }
 
   div {
-    padding: 11px
+    padding: 11px;
   }
 
   .footer {
     margin-top: 17.5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header,
+  .main_content,
+  .main_content .content,
+  footer,
+  aside {
+    padding: 30px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation div {
+    margin: 30px;
+  }
+
+  .navigation div:nth-child(2) {
+    flex-grow: 1;
+    margin: 0 30px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .navigation {
+    margin-bottom: 30px;
+  }
+
+  .hero .title {
+    margin: 10px;
+  }
+
+  .main_content {
+    background-color: yellow;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .main_content .content {
+    gap: 30px;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  .sidebar div:first-child {
+    margin-bottom: 20px;
+  }
+
+  div {
+    padding: 13.8px;
+  }
+
+  .footer {
+    margin-top: 30px;
   }
 }
