@@ -1,0 +1,250 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header,
+div,
+footer,
+aside {
+  padding: 11px;
+}
+
+.main_content,
+.footer {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-image: url(/images/heroImage.png);
+  height: 33vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.navigation {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.navigation .pages {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  flex-grow: 5;
+}
+
+.pages a {
+  text-decoration: none;
+  color: #777;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-right: 10px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.icons {
+  color: #777;
+  font-style: normal;
+}
+.social a {
+  text-decoration: none;
+}
+
+.title {
+  color: burlywood;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3vh 18vw 6vh;
+  margin-top: 15.5vh;
+  align-self: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main_content {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  margin-right: 10px;
+  background-color: slategrey;
+  gap: 10px;
+}
+
+.content div {
+  background-color: darkslateblue;
+  flex: 1 0 42%;
+}
+
+.content .last {
+  background-color: cadetblue;
+}
+
+.sidebar {
+  flex-grow: 1;
+  background-color: brown;
+}
+.sidebar div {
+  background-color: darkorange;
+}
+.sidebar div:first-child {
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 10px;
+}
+.footer div {
+  background-color: coral;
+}
+
+/* TABLET */
+
+@media only screen and (max-width: 1024px) {
+  header,
+  .main_content,
+  .main_content .content,
+  footer,
+  aside {
+    padding: 17.5px;
+  }
+
+  .header {
+    margin-bottom: 17.5px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .navigation {
+    margin-bottom: 10px;
+  }
+
+  .header ul {
+    padding-inline-start: 20px;
+  }
+
+  .pages {
+    gap: 8px;
+  }
+
+  .social {
+    gap: 10px;
+    margin-right: 0;
+    padding-inline-start: 30px;
+  }
+
+  .title {
+    margin-top: 16vh;
+    white-space: normal;
+    font-size: 1.53rem;
+    padding: 3vh 13vw 6vh;
+  }
+
+  .main_content {
+    background-color: yellow;
+    flex-direction: column;
+    gap: 17.5px;
+  }
+
+  .main_content .content {
+    gap: 16px;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  div {
+    padding: 11px;
+  }
+
+  .footer {
+    margin-top: 17.5px;
+  }
+}
+
+/* PHONE */
+
+@media only screen and (max-width: 480px) {
+  body {
+    margin: 0;
+  }
+
+  header,
+  .main_content,
+  .main_content .content,
+  footer,
+  aside {
+    padding: 30px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    height: 40vh;
+  }
+
+  .navigation {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    margin-top: 10vh;
+    font-size: 1.2rem;
+    padding: 2vh 2vh 4vh;
+  }
+
+  .main_content {
+    background-color: yellow;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .main_content .content {
+    gap: 30px;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  .sidebar div:first-child {
+    margin-bottom: 20px;
+  }
+
+  div {
+    padding: 13.8px;
+  }
+
+  .footer {
+    margin-top: 30px;
+  }
+}
