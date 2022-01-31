@@ -5,14 +5,10 @@
 
 header,
 div,
+.content,
 footer,
 aside {
   padding: 11px;
-}
-
-.main_content,
-.footer {
-  background-color: black;
 }
 
 .header {
@@ -66,6 +62,10 @@ aside {
   text-decoration-thickness: 2px;
 }
 
+.pages a:hover i {
+  color: darkorange
+}
+
 .social {
   display: flex;
   justify-content: space-between;
@@ -112,42 +112,88 @@ a.twitter:hover .icons {
   flex-wrap: wrap;
   flex-grow: 3;
   margin-right: 10px;
-  background-color: slategrey;
+  background-color: #ccc;
   gap: 10px;
 }
 
-.content div {
-  background-color: darkslateblue;
+.content article {
+  background-color: #fff;
   flex: 1 0 42%;
 }
 
+article {
+  position: relative;
+  max-width: 500px;
+}
+
+.blog_hero {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.blog_hero img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog_hero p {
+  position: absolute;
+  bottom: 1px;
+  left: 20px;
+  color:burlywood;
+}
+
+article h2 {
+  background-color: lightcoral;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px 5px 1px;
+  margin-top: 0;
+  color: #ddd;
+  text-transform: uppercase;
+}
+
+.column {
+  margin: 10px;
+  columns: 2;
+  color: #777;
+}
+
+article a {
+  display: block;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #777;
+  margin-bottom: 10px;
+}
+
 .content .last {
-  background-color: cadetblue;
+  text-align: center;
 }
 
 .sidebar {
   flex-grow: 1;
-  background-color: brown;
-}
-.sidebar div {
-  background-color: darkorange;
-}
-.sidebar div:first-child {
-  margin-bottom: 10px;
+  background-color: #ccc;
+  max-width: 300px;
+  text-align: center;
 }
 
 .footer {
   margin-top: 10px;
+  background-color: #ccc;
+  padding: 0 10px;
 }
-.footer div {
-  background-color: coral;
+.footer p {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  color: #777;
 }
 
 /* TABLET */
 
 @media only screen and (max-width: 1024px) {
-  header,
-  .main_content,
   .main_content .content,
   footer,
   aside {
@@ -160,10 +206,6 @@ a.twitter:hover .icons {
 
   .logo {
     margin-left: 0;
-  }
-
-  .navigation {
-    margin-bottom: 10px;
   }
 
   .header ul {
@@ -188,7 +230,6 @@ a.twitter:hover .icons {
   }
 
   .main_content {
-    background-color: yellow;
     flex-direction: column;
     gap: 17.5px;
   }
@@ -199,6 +240,10 @@ a.twitter:hover .icons {
 
   .content {
     margin-right: 0;
+  }
+
+  .sidebar {
+    max-width: 100%;
   }
 
   div {
@@ -218,7 +263,6 @@ a.twitter:hover .icons {
   }
 
   header,
-  .main_content,
   .main_content .content,
   footer,
   aside {
@@ -245,7 +289,6 @@ a.twitter:hover .icons {
   }
 
   .main_content {
-    background-color: yellow;
     flex-direction: column;
     gap: 30px;
   }
