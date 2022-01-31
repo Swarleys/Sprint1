@@ -1,6 +1,11 @@
 .container {
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "mainContent"
+    "footer";
 }
 
 header,
@@ -12,9 +17,6 @@ aside {
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 10px;
   background-image: url(/images/heroImage.png);
   height: 33vh;
@@ -22,12 +24,15 @@ aside {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  grid-area: header;
 }
 
 .navigation {
-  display: flex;
+  display: grid;
   margin-bottom: 5px;
   align-items: center;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas: "logo pages social";
 }
 
 .logo {
@@ -35,13 +40,14 @@ aside {
   align-self: center;
   margin-left: 10px;
   animation: moveInLeft 2000ms ease-in;
+  grid-area: logo;
 }
 
 .navigation .pages {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-auto-flow: column;
   list-style-type: none;
-  flex-grow: 5;
+  grid-area: pages;
 }
 
 .pages a {
@@ -65,14 +71,15 @@ aside {
 }
 
 .pages a:hover i {
-  color: darkorange
+  color: darkorange;
 }
 
 .social {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
   gap: 20px;
   margin-right: 10px;
+  grid-area: social;
 }
 
 .social li {
@@ -92,7 +99,7 @@ a.facebook:hover .icons {
 }
 
 a.twitter:hover .icons {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .title {
@@ -108,22 +115,23 @@ a.twitter:hover .icons {
 }
 
 .main_content {
-  display: flex;
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas: "blogContent blogContent aside";
 }
 
 .content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 3;
+  display: grid;
   margin-right: 10px;
   background-color: #ccc;
   gap: 10px;
   max-width: 1000px;
+  grid-area: blogContent;
+  grid-template-columns: 1fr 1fr;
 }
 
 .content article {
   background-color: #fff;
-  flex: 1 0 42%;
 }
 
 article {
@@ -146,7 +154,7 @@ article {
   position: absolute;
   bottom: 1px;
   left: 20px;
-  color:burlywood;
+  color: burlywood;
 }
 
 article h2 {
@@ -175,25 +183,30 @@ article a {
 
 .content .last {
   text-align: center;
+  grid-column: 1/-1;
 }
 
 .sidebar {
-  flex-grow: 1;
   background-color: #ccc;
   max-width: 300px;
   text-align: center;
+  grid-area: aside;
 }
 
 .footer {
   margin-top: 10px;
   background-color: #ccc;
   padding: 0 10px;
+  grid-area: footer;
 }
+
 .footer p {
   background-color: #eee;
   padding: 10px;
   text-align: center;
   color: #777;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 /* TABLET */
@@ -235,15 +248,14 @@ article a {
   }
 
   .main_content {
-    flex-direction: column;
+    grid-template-areas:
+      "blogContent"
+      "aside";
     gap: 17.5px;
   }
 
-  .main_content .content {
-    gap: 16px;
-  }
-
   .content {
+    gap: 16px;
     margin-right: 0;
   }
 
@@ -274,10 +286,6 @@ article a {
     padding: 30px;
   }
 
-  .navigation {
-    flex-direction: column;
-  }
-
   .header {
     margin-bottom: 30px;
     height: 40vh;
@@ -285,6 +293,18 @@ article a {
 
   .navigation {
     margin-bottom: 30px;
+    grid-template-areas:
+      "logo"
+      "pages"
+      "social";
+    grid-template-columns: none;
+  }
+
+  .logo,
+  .pages,
+  .social {
+    align-self: center;
+    justify-self: center;
   }
 
   .title {
@@ -294,16 +314,13 @@ article a {
   }
 
   .main_content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .main_content .content {
     gap: 30px;
   }
 
   .content {
+    gap: 30px;
     margin-right: 0;
+    grid-template-columns: 1fr;
   }
 
   .sidebar div:first-child {
