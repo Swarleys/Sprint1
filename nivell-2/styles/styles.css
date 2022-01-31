@@ -52,6 +52,20 @@ aside {
   color: #777;
 }
 
+.pages a i {
+  margin-right: 5px;
+}
+
+.pages a:visited {
+  color: #777;
+}
+
+.pages a:hover {
+  text-decoration: underline;
+  text-decoration-color: darkorange;
+  text-decoration-thickness: 2px;
+}
+
 .social {
   display: flex;
   justify-content: space-between;
@@ -69,6 +83,14 @@ aside {
 }
 .social a {
   text-decoration: none;
+}
+
+a.facebook:hover .icons {
+  color: #3b5998;
+}
+
+a.twitter:hover .icons {
+  color: #1DA1F2;
 }
 
 .title {
